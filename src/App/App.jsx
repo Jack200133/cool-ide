@@ -1,19 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Menu from "../Menu/Menu";
 import Editor from "../Editor/Editor";
+import defCode from "./default.jsx"
 
 const App = () => {
-  const [code, setCode] = useState(`CLASS Main {
-    x : Int;
-    LET
-    10
-    "SDAS"
-    -- ASDASD
-    : 
-    == 
-    <= 
-    
-  }`)
+
+  const [code, setCode] = useState(``)
+  useEffect(() => {
+    setCode(defCode)
+  }, [])
 
   return (
 

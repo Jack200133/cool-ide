@@ -40,7 +40,7 @@ const Menu = ({ setFileText }) => {
                 </label>
 
                 <button
-                    className="px-4 py-2 m-2 text-white bg-gray-800 rounded-md cursor-pointer  text-green-500"><IconPlayerPlayFilled color="lime" size={48} />
+                    className="px-4 py-2 m-2 bg-gray-800 rounded-md cursor-pointer  text-green-500"><IconPlayerPlayFilled color="lime" size={24} />
                 </button>
                 <h1 className="text-2xl font-bold text-white">Cool IDE</h1>
             </div>
