@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { IconPlayerPlayFilled } from '@tabler/icons-react';
 
-const Menu = ({ setFileText }) => {
+
+const Menu = ({ hanlder, setFileText }) => {
+
 
 
     const handleFileUpload = (e) => {
-        const file_path = e.target.value
         const file = e.target.files[0] // Obtenemos el primer archivo seleccionado
         if (file) {
             // Realiza las operaciones que necesites con el archivo aquí
@@ -40,6 +41,7 @@ const Menu = ({ setFileText }) => {
                 </label>
 
                 <button
+                    onClick={hanlder}
                     className="px-4 py-2 m-2 bg-gray-800 rounded-md cursor-pointer  text-green-500"><IconPlayerPlayFilled color="lime" size={24} />
                 </button>
                 <h1 className="text-2xl font-bold text-white">Cool IDE</h1>

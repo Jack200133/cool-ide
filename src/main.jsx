@@ -6,7 +6,7 @@ import {
   ApiContext,
 } from '@hooks'
 
-const isSecure = import.meta.env.VITE_API_SECURE
+const isSecure = false
 const apiUrl = import.meta.env.VITE_API_URL
 const apiPort = import.meta.env.VITE_API_PORT
 const apiPath = import.meta.env.VITE_API_PATH
