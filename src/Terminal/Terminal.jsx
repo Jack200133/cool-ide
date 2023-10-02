@@ -67,8 +67,8 @@ function Terminal({ data }) {
             </div>
 
             {zoomImage && (
-                <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-gray-800 bg-opacity-75">
-                    <img className="max-h-full max-w-full" src={`data:image/png;base64,${zoomImage}`} alt="Zoomed" />
+                <div className="fixed top-0 left-0 w-screen h-screen flex items-center justify-center bg-gray-800 bg-opacity-75">
+                    <img className="max-h-screen max-w-screen" src={`data:image/png;base64,${zoomImage}`} alt="Zoomed" />
                 </div>
             )}
         </div>
