@@ -22,7 +22,6 @@ const App = () => {
 
   const handleRun = () => {
     const method = 'POST'
-    const a = JSON.stringify(code)
     const body = {
       code: code,
     }
@@ -46,7 +45,7 @@ const App = () => {
     <div className="flex flex-col w-screen h-screen" >
       <Menu setFileText={setCode} hanlder={handleRun} />
       <div className="flex-grow">
-        <Editor code={code} setCode={setCode} />
+        <Editor code={code} setCode={setCode} responseData={data?.["3D"]} />
       </div>
 
       <Terminal data={data} />
