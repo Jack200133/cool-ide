@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { IconArrowBarToDown } from '@tabler/icons-react';
 
-function Terminal({ data }) {
+function Terminal({ data, setCodetwo, codetwo }) {
     if (!data) return null;
 
     const [activeTab, setActiveTab] = useState("Errores");
@@ -38,6 +38,11 @@ function Terminal({ data }) {
                         <button className='p-0 m-0 hover:border-green-500 '>
                             <a href={`data:image/png;base64,${data.symbol_table_image}`} download="tabla_de_simbolos.png" className="text-white"><IconArrowBarToDown color="lime" size={24} /></a>
                         </button>
+                    </button>
+
+                    <button
+                        onClick={() => setCodetwo(!codetwo)}>
+                        Cambiar Codigo
                     </button>
                 </div>
 

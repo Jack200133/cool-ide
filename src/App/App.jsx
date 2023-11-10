@@ -10,6 +10,8 @@ import {
 const App = () => {
 
   const [code, setCode] = useState(``)
+  const [codetwo, setCodetwo] = useState(true)
+
   const {
     isLoading, hasError, data, handleRequest,
   } = useApi()
@@ -45,10 +47,10 @@ const App = () => {
     <div className="flex flex-col w-screen h-screen" >
       <Menu setFileText={setCode} hanlder={handleRun} />
       <div className="flex-grow">
-        <Editor code={code} setCode={setCode} responseData={data?.["3D"]} />
+        <Editor code={code} setCode={setCode} responseData={data} codetwo={codetwo} />
       </div>
 
-      <Terminal data={data} />
+      <Terminal data={data} setCodetwo={setCodetwo} codetwo={codetwo} />
     </div>
   )
 }

@@ -6,7 +6,7 @@ ace.define("ace/mode/tridirec_highlight_rules", ["require", "exports", "module",
         this.$rules = {
             start: [
                 {
-                    token: "entity.name.class",
+                    token: "entity.name.function",
                     regex: "CLASS",
                 },
                 {

@@ -1,11 +1,12 @@
-import AceEditor from "react-ace";
-import "ace-builds/src-noconflict/theme-github";
-import "ace-builds/src-noconflict/theme-monokai";
-import "../mode-cool"; // Asegúrate de importar tu archivo de modo aquí
+import AceEditor from "react-ace"
+import "ace-builds/src-noconflict/theme-github"
+import "ace-builds/src-noconflict/theme-monokai"
+import "../mode-cool"
 import "../trid-cool"
-import "./Editor.css";
+import '../mips-cool'
+import "./Editor.css"
 
-const Editor = ({ code, setCode, responseData }) => {
+const Editor = ({ code, setCode, responseData, codetwo }) => {
 
     return (
         responseData
@@ -36,7 +37,7 @@ const Editor = ({ code, setCode, responseData }) => {
                 />
                 <AceEditor
                     style={{ width: "50%", height: "100%" }}
-                    mode="tridirec"
+                    mode={codetwo ? 'tridirec' : 'mips'}
                     theme="monokai"
                     name="UNIQUE_ID_OF_DIV_RESPONSE"
                     // onChange={setCode}
@@ -46,7 +47,7 @@ const Editor = ({ code, setCode, responseData }) => {
                     showGutter={true}
 
                     highlightActiveLine={true}
-                    value={responseData}
+                    value={codetwo ? responseData['3D'] : responseData['ASS']}
                     setOptions={{
                         enableBasicAutocompletion: true,
                         enableLiveAutocompletion: true,
